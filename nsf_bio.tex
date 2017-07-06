@@ -1,7 +1,8 @@
 %
-% Demba Ba - Curriculum Vitae
+% Demba Ba - NSF Biosketch
 %
-\documentclass[12pt,letterpaper]{article}
+\pdfminorversion=4
+\documentclass[11pt]{article}
 
 \makeatletter
 \let\saved@bibitem\@bibitem % < -- save to prevent problems due to the command getting redefined...
@@ -45,13 +46,14 @@
 \geometry{
   body={6.5in, 9.0in},
   left=1.0in,
+  right=1.0in,
   top=1.0in
 }
 
 % Customize page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
+%%\pagestyle{myheadings}
+%\markright{\name, Harvard University}
+%\thispagestyle{empty}
 
 % Custom section fonts
 \usepackage{sectsty}
@@ -71,7 +73,7 @@
 % Make lists without bullets and compact spacing
 \renewenvironment{itemize}{
   \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
+    %\setlength{\leftmargin}{1.5em}
     \setlength{\itemsep}{0.25em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0.25em}
@@ -108,7 +110,7 @@
 \HCode{<div class="row">}
 \HCode{<div class="col-md-12">}
 \HCode{<h1>}
-{\name, Harvard University}
+{\Large \name, Harvard University}
 \HCode{</h1>}
 \HCode{</div>} %column
 \HCode{</div>} %row
@@ -128,13 +130,23 @@
 \HCode{<div class="col-md-12">}
 \section*{Professional Preparation}
 
-\begin{itemize}
-    \item Ph.D./M.S. EECS, Massachusetts Institute of Technology, 2011/2016.
-    %\item M.S. EECS, Massachusetts Institute of Technology, 2006.
-    \item B.S. Electrical Engineering, University of Maryland, College Park, 2004.
-\end{itemize}
+%\begin{itemize}
+%    \item Ph.D./M.S. EECS, Massachusetts Institute of Technology, 2011/2016.
+%    %\item M.S. EECS, Massachusetts Institute of Technology, 2006.
+%    \item B.S. Electrical Engineering, University of Maryland, College Park, 2004.
+%\end{itemize}
 
-\vspace{-0.25in}
+%\hspace{-0.075in}
+\begin{tabular}{llll}
+University of Maryland & College Park, MD & Electrical Engineering & B.S., 2004 \\
+Massachusetts Institute of Technology & Cambridge, MA & Electrical Engineering & M.S., 2006 \\
+ &  & and Computer Science & \\
+Massachusetts Institute of Technology & Cambridge, MA & Electrical Engineering & Ph.D., 2011 \\
+ &  & and Computer Science & \\
+Massachusetts Institute of Technology & Cambridge, MA & Neuroscience & 2011--2015
+\end{tabular}
+
+%\vspace{-0.25in}
 
 
 \section*{Appointments}
