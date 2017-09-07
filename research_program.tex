@@ -141,6 +141,10 @@
 \HCode{</div>} %end column
 \HCode{</div>} %end row
 
+\begin{center} {\large \textbf{Deep Sparse Signal Representations: A Novel Framework for Multiscale Fusion and the Assessment of Multiscale Interactions in the Brain}}%Theory, Algorithms, and Applications to Multiscale Fusion}}
+\end{center}
+
+
 \HCode{<div class="row">}
 \HCode{<div class="col-md-12">}
 %\section*{Professional Preparation}
@@ -176,7 +180,30 @@ The brain is a high-dimensional dynamical system that exhibits intricate dynamic
 Stochastic processes that exhibit dynamics at multiple temporal or spatial
 scales are pervasive in engineering and science. In health monitoring and neuroscience, there has been an increasing interest in taking a systems engineering approach to understanding and controlling the dynamics of the human body and the brain~\cite{kim2011epidermal2,liberman2013closed}. Indeed, over the past decade, human interaction with a variety of sensors that monitor and/or alter the activity of the autonomic (e.g. wearable bands~\cite{savage2015mobile}) and central nervous system~\cite{sejnowski2014putting} has grown exponentially. One salient feature of these sensor data is their heterogeneity, i.e. the presence of different temporal and spatial scales, as well as categories. At present, there lack principled approaches that
 can fuse heterogeneous sources of data acquired at multiple temporal and spatial scales to identify
-common underlying latent mulsticale states. More specifically, there is a need for a framework that can learn low-dimensional (e.g. sparse) latent representations of a system observed through high-dimensional multiscale observations, to obtain a provably adequate characterization of said system (e.g. heart or brain region/system), and then be used to design algorithms to control desired states of the system.I propose to develop a theoretical and algorithmic framework for estimation, inference and model comparison in \emph{Deep Sparse Representations of Signals}, with applications to neuroscience. 
+common underlying latent multiscale states. More specifically, there is a need for a framework that can learn low-dimensional (e.g. sparse) latent representations of a system observed through high-dimensional multiscale observations, to obtain a provably adequate characterization of said system (e.g. heart or brain region/system), and then be used to design algorithms to control desired states of the system. I propose to develop a theoretical and algorithmic framework for estimation, inference and model comparison in \emph{Deep Sparse Representations of Signals}, with applications to neuroscience. 
+
+\subsection*{Aims of Proposed Research}
+
+The research proposed here will provide answers to novel theoretical and algorithm questions, as well as scientific ones in neuroscience. While the scientific questions of interest come from neuroscience, the framework is general enough to be applicable to other domains of science.
+\\
+\\
+\noindent \textbf{\underline{Scientific Aims}}: \emph{Deep Sparse Representations of Signals} provide a framework for answering important questions about the brain and the nature of neural computation. Examples of such questions are
+\begin{enumerate}
+	\item What is the nature of interaction between neural data at different spatial and temporal scales (e.g. neural spiking and LFP)? How to fuse, in a statistically-optimal sense, multiscale data?
+	\item What are the atoms of neural computation? How to learn, using multiscale data, the ``filters" or atoms the brain uses to encode information?
+	\item What are the neural correlates of behavior? If we think of behavior as occurring at a very-slow temporal scale, what is the nature of its interactions with other temporal scales in the brain (e.g. neural spiking and LFP)?
+\end{enumerate}
+
+\noindent \textbf{\underline{Theoretical and Algorithmic aims}}: The proposed framework raises important and unanswered theoretical and algorithmic questions
+
+\begin{enumerate}
+	\item What are the connections between neural networks, and filter banks with sparsity constraints?  What are the sparse recovery limits (e.g. number of measurements) of training a deep sparse filter bank model?
+	\item How to train a deep sparse filter bank using ``small" data? This is a problem that is particularly important in neuroscience where the size of the training data can in no sense be considered ``big"?
+	\item For ``big"-data problems, such as high-resolution video and imaging, how to use the theoretical findings to tackle the data storage demands of training classical deep networks?
+
+	\item How to develop efficient optimization algorithms to estimate deep sparse signal representations? These will be convex optimization problems that will need to be parallelized in clever ways, e.g using new ADMM algorithms.	
+	
+\end{enumerate}
 
 \subsection*{Deep Sparse Signal Representations}
 
