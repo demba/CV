@@ -1,0 +1,272 @@
+%
+% Demba Ba - NSF Biosketch
+%
+\pdfminorversion=4
+\documentclass[12pt]{article}
+
+\makeatletter
+\let\saved@bibitem\@bibitem % < -- save to prevent problems due to the command getting redefined...
+\makeatother
+
+\usepackage{etaremune}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{bibentry}
+\PassOptionsToPackage{hyphens}{url}\usepackage[dvips]{hyperref}
+\usepackage{geometry}
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\urlstyle{same}
+
+\usepackage{amsmath}
+
+% Fonts
+\ifdefined\ispdf
+    \usepackage[urw-garamond]{mathdesign}
+    \usepackage[T1]{fontenc}
+\else
+    \usepackage[T1]{fontenc}
+\fi
+
+\def\HCode#1{}
+
+% Set your name here
+\def\name{Demba Ba}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = gray,
+  pdfauthor = {\name},
+  pdfkeywords = {signal processing, computational neuroscience, scientific computing},
+  pdftitle = {\name: NSF Biosketch},
+  pdfsubject = {National Science Foundation Biosketch},
+  pdfpagemode = UseNone
+}
+
+
+\geometry{
+  %body={6.5in, 9.0in},
+  left=1.0in,
+  right=1.0in,
+  top=1.0in,
+  bottom=1.0in
+}
+
+% Customize page headers
+%%\pagestyle{myheadings}
+%\markright{\name, Harvard University}
+%\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    %\setlength{\leftmargin}{1.5em}
+    \setlength{\itemsep}{0.25em}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0.25em}
+  }
+}{
+  \end{list}
+}
+
+%To highlight my own name in the bibliography
+\def\FormatName#1{%
+    \def\myname{Demba Ba}%
+    \edef\name{#1}%
+    \ifx\name\myname
+      \textbf{#1}%
+    \else
+      #1%
+    \fi
+}
+
+\begin{document}
+\sloppy
+
+\begingroup
+\makeatletter
+\let\@bibitem\saved@bibitem % <-- restore the original command immediately before use
+\nobibliography{include/all}
+\endgroup
+
+% Place name at left
+%\HCode{<div style="margin: 0 auto; overflow: hidden; width: 960px">} %row
+\HCode{<div class="fluid-container"}
+
+%\HCode{<div style="display: inline; float: left; margin: 0 10px; overflow: hidden; width: 820px">} %column
+\HCode{<div class="row">}
+\HCode{<div class="col-md-12">}
+\HCode{<h1>}
+{\huge \name}
+\HCode{</h1>}
+\HCode{</div>} %column
+\HCode{</div>} %row
+
+\bigskip
+
+\HCode{<div class="row">}
+\HCode{<div class="col-md-4">}
+\begin{minipage}[t]{0.5\textwidth}
+  Associate Professor of Electrical Engineering \\
+  and Bioengineering \\
+  Harvard University, Cambridge, MA 02138 \\
+  %School of Engineering and Applied Sciences \\
+  %Maxwell Dworkin \\
+  %33 Oxford st
+  %Cambridge, MA 02138 \\
+\end{minipage}
+\HCode{</div>} %end column
+\HCode{<div class="col-md-8">}
+\begin{minipage}[t]{0.5\textwidth}
+  Phone: (617) 496-1228 \\
+  %Fax: (301) 332-5264 \\
+  %Office: MD 143 \\
+  Email: \href{mailto:demba@seas.harvard.edu}{demba@seas.harvard.edu} \\
+  %Homepage: \href{http://demba-ba.org/}{http://demba-ba.org/} \\
+  Group page: \href{http://crisp.seas.harvard.edu}{http://crisp.seas.harvard.edu/}
+\end{minipage}
+\HCode{</div>} %end column
+\HCode{</div>} %end row
+
+\HCode{<div class="row">}
+\HCode{<div class="col-md-12">}
+\noindent \textbf{Educational Background}
+%\begin{itemize}
+%    \item Ph.D./M.S. EECS, Massachusetts Institute of Technology, 2011/2016.
+%    %\item M.S. EECS, Massachusetts Institute of Technology, 2006.
+%    \item B.S. Electrical Engineering, University of Maryland, College Park, 2004.
+%\end{itemize}
+
+\begin{tabular}{llll}
+\hspace{-0.125in} University of Maryland & College Park, MD & EE & B.S., 2004 \\
+%Massachusetts Institute of Technology & Cambridge, MA & Electrical Engineering & M.S., 2006 \\
+% &  & and Computer Science & \\
+\hspace{-0.125in} Massachusetts Institute of Technology & Cambridge, MA & EECS & Ph.D., 2011 \\
+% &  & and Computer Science & \\
+%Massachusetts Institute of Technology & Cambridge, MA & Computational & Post-doc.,\\
+% &  & Neuroscience & 2011--2015 \\
+
+\end{tabular}
+
+
+%\section*{Awards \& Honors}
+%
+%\begin{itemize}
+%	\item \textbf{2016 Fellow in Neuroscience of the Alfred P. Sloan Foundation}
+%    \item Spotlight Presentation at Advances in Neural Information Processing Systems 25 (NIPS 2012) [< 5\% acceptance rate]
+%    \item ICME 2010 Best Student Paper Award (for summer 2009 work at MS Research)
+%    \item University of Maryland Engineering honors citation
+%    \item \textbf{A} \textbf{S}cholars \textbf{P}rograms for \textbf{I}ndustry-oriented \textbf{R}esearch in \textbf{E}ngineering
+%\end{itemize}
+%
+%\section*{Relevant Coursework}
+%
+%Discrete-time Signal Processing, Stochastic Processes
+%Detection and Estimation, Statistical Learning and Estimation, High-dimensional Statistics,
+%Dynamic systems and Control, Advanced Computational Photography, Principles
+%of Digital Communication, Abstract Linear Algebra, Real Analysis, Functional
+%Analysis.
+
+%\section*{Professional Registration}
+
+%\begin{itemize}
+%    \item Professional Engineer, Texas, \#118233
+%\end{itemize}
+
+%\HCode{<a name="journalpapers"></a>}
+%\input{sections/books}
+%\input{sections/oral_presentations}
+%\input{sections/conf_proceedings}
+\vspace{0.1in}
+\noindent \textbf{Research Objective}
+
+\noindent My research interests lie at the intersection of high-dimensional statistics, optimization, and time-series analysis, with applications to neuroscience and multimedia signal processing. Recently, I have become interested in the connection between artificial neural networks and sparse signal processing, as a means to understand the principles of hierarchical representations of sensory signals in the brain, and to develop explainable AI. The aim of this research is to explain neural networks as inference algorithms in biologically-plausible mechanistic, generative, statistical models. 
+
+\vspace{0.1in}
+\input{sections/mos_related_pubsONRwp}
+
+\vspace{-0.05in}
+\noindent \textbf{Research Funding}
+
+ARO, Co-PI, Closed-Loop Multisensory BCI for Enhanced Decision Accuracy (2016--2022)
+
+Sloan Foundation, PI, Research Fellowship in Neuroscience (2016--2020)
+
+Amazon, PI, Novel BCIs Using Deep Sparse Signal Representations (2018--2020)
+
+Amazon, PI, State-Space Models, Deep Sparse Representations, Neural Networks (2019--2021)
+
+
+%\input{sections/other_pubsAI}
+%\input{sections/tech_reports}
+%\input{sections/grants}
+%\input{sections/courses}
+%\input{sections/students}
+%\input{sections/service}
+%\input{sections/other}
+%\newpage
+
+
+%\section*{Collaborators in the Past 48 Months}
+
+%Todd Coleman (Univ. Cal. San Diego), Emery Brown (MIT/Harvard), Vahid Tarokh (Harvard), Anne C. Smith (Harvard/Univ. Arizona), Carol Barnes (Univ. Arizona), Sarah Burke (Univ. Florida), Kay Tye (MIT), Stephen Allsop (MIT/Harvard), Luca Citi (Univ. Essex, UK), Massimilio Ponti (), Peter Latham (), Riccardo Poli (Univ. Essex, UK), Maryam Shanechi (Univ. Southern Cal.), Iannis Dimeris, Bejan Pesaran (NYU), Anne Churchland (Cold Spring Harbor Nat. Lab), Behtash Babadi, Patrick Purdon, Sridevi Sarma, Emad Eskandar, Gabriella Czanner, Uri Eden, Simona Temereanca, Wendy Suzuki, Taposh Banerjee, Wei Wu, Hubert Lim
+
+%Gabe Shcamberg, Noa Shinitski, Yingzhuo Zhang,
+
+%Stephen	Allsop (Harvard)	, Behtash Babadi (University of Maryland, College Park), Taposh Banerjee (Harvard), Carol Barnes	(University of Arizona), Emery Brown	(MIT/Harvard), Sarah Burke (University of Florida)	, Anne Churchland (Cold Spring Harbor Lab), Luca	Citi (University of Essex), Todd Coleman (University of California, San Diego), Gabriella Czanner (University of Liverpool), Yiannis Demiris (Imperial College London), Uri	Eden (Boston University), Emad Eskandar (Harvard), Peter	Latham (University College London), Hubert Lim (University of Minnesota), Bijan Pesaran (NYU), Riccardo Poli	 (University of Essex), 	Massimiliano Ponti (University College London), Patrick Purdon (Harvard), Sridevi Sarma (John Hopkins University), Maryam Shanechi (USC), Anne	Smith (University of Arizona/Harvard), Wendy Suzuki (NYU), Vahid Tarokh (Harvard), Simona Temereanca (Harvard), Kay Tye (MIT), Wei Wu (Stanford University), Danilo Mandic (Imperical College London), Michael Jordan (University of California, Berkeley).
+
+%\vspace{-0.15in}
+
+
+%\section*{Graduate and Postdoctoral Advisors}
+%
+%\begin{itemize}
+%	\item[] Graduate and postdoctoral advisor: Emery N. Brown (MIT/Harvard)
+%\end{itemize}
+%\vspace{-0.25in}
+%\section*{Advisees}
+%
+%\begin{itemize}
+%
+%	\item \textbf{Postdoctoral researcher}: Taposh Banerjee.
+%	\item \textbf{Ph.D. students}: Yingzhuo Zhang (Harvard, Female); Bahareh Tolooshams (Harvard, Female); Edward Nobikhov (Harvard), Andrew Song (MIT).
+%	\item \textbf{Master students}: Xu Si (Harvard, Female); Courtney Cochrane (Harvard, Female), Jiejun Lu (Summer 2016 Visitor, Female, China); Noa Shinitski (Summer 2016 Visitor, Female, Isra\"{e}l/Germany).
+%	\item \textbf{Harvard Undergraduates}: Ryan Halvorson; Jerry Chang; Ciara Adkins (AfricanAmerican Female); Alina Acosta (Hispanic-American Female).
+%
+%\end{itemize}
+
+
+%\input{sections/references}
+
+
+\vfill
+% Footer
+%\HCode{<center>}
+%\begin{center}
+%    \begin{small}
+%        Last updated: \today\ at \currenttime
+%    \end{small}
+%\end{center}
+%\HCode{</center>}
+
+\bibliographystyle{myplainurl}
+
+\HCode{</div>} %column
+\HCode{</div>} %row
+\HCode{</div>} %fluid-container
+
+\end{document}
